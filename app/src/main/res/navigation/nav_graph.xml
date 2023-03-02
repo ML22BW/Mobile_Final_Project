@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/list_Fragment">
+
+    <fragment
+        android:id="@+id/login_Fragment"
+        android:name="com.example.final_project_passman.Login_Fragment"
+        android:label="fragment_login_"
+        tools:layout="@layout/fragment_login_" >
+        <action
+            android:id="@+id/action_login_Fragment_to_list_Fragment"
+            app:destination="@id/list_Fragment" />
+        <action
+            android:id="@+id/action_login_Fragment_to_account_Create_Fragment"
+            app:destination="@id/account_Create_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/list_Fragment"
+        android:name="com.example.final_project_passman.List_Fragment"
+        android:label="fragment_list_"
+        tools:layout="@layout/fragment_list_" >
+        <action
+            android:id="@+id/action_list_Fragment_to_creation_management_Fragment"
+            app:destination="@id/creation_management_Fragment" />
+        <action
+            android:id="@+id/action_list_Fragment_to_deletion_Fragment"
+            app:destination="@id/deletion_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creation_management_Fragment"
+        android:name="com.example.final_project_passman.Creation_management_Fragment"
+        android:label="fragment_creation_management"
+        tools:layout="@layout/fragment_creation_management" />
+    <fragment
+        android:id="@+id/deletion_Fragment"
+        android:name="com.example.final_project_passman.Deletion_Fragment"
+        android:label="fragment_deletion"
+        tools:layout="@layout/fragment_deletion" />
+    <fragment
+        android:id="@+id/account_Create_Fragment"
+        android:name="com.example.final_project_passman.Account_Create_Fragment"
+        android:label="fragment_account__create_"
+        tools:layout="@layout/fragment_account__create_" >
+        <action
+            android:id="@+id/action_account_Create_Fragment_to_login_Fragment"
+            app:destination="@id/login_Fragment" />
+    </fragment>
+</navigation>
